@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: hola mundo
-      run: echo "Hola mundoo"
+      run: echo "Hola mundoooo"
     - name: touch file
       run: touch hola.txt
     - name: SET text
@@ -22,7 +22,7 @@ jobs:
       run: cat hola.txt
   other:
     runs-on: ubuntu-latest
-    needs: holaa
+    needs: hola
     steps:
     - name: LS
       run: ls -al
