@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: hola mundo
-      run: echo "Hola mundoooooo"
+      run: echo "Hola mundoooooo, los quiero"
     - name: touch file
       run: touch hola.txt
     - name: SET text
