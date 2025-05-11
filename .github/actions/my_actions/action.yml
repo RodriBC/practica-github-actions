@@ -1,0 +1,7 @@
+name: "My Local Action"
+description: "Una acción local de ejemplo"
+runs:
+  using: "composite"
+  steps:
+    - run: echo "Hola mundoooooo, los quiero"
+      shell: bash
