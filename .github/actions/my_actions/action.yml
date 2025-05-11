@@ -1,7 +1,14 @@
 name: "My Local Action"
 description: "Una acción local de ejemplo"
+
+inputs:
+  message:
+    description: "Pruebas"
+    required: True
+    default: "Hola"
+
 runs:
   using: "composite"
   steps:
-    - run: echo "Hola mundoooooo, los quiero"
+    - run: echo "Hola ${{ inputs.message }}"
       shell: bash
