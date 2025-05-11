@@ -10,8 +10,9 @@ jobs:
       - name: step
         env:
           STEP_MY_VAR: RR2
-        run: echo "Valor: ${{ env.MY_ENV_VAR }}"
-        run: echo "Valor: ${{ env.STEP_MY_VAR }}"
+        run: |
+        echo "Valor: ${{ env.MY_ENV_VAR }}"
+        echo "Valor: ${{ env.STEP_MY_VAR }}"
       - name: Checkout code
         uses: actions/checkout@v4
       - name: ls
