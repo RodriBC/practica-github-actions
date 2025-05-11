@@ -13,6 +13,7 @@ jobs:
         run: |
           echo "Valor: ${{ env.MY_ENV_VAR }}"
           echo "Valor: ${{ env.STEP_MY_VAR }}"
+          echo "Valor: ${{ vars.MY_VARIABLE_2 }}"
       - name: Checkout code
         uses: actions/checkout@v4
       - name: ls
