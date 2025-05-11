@@ -9,11 +9,11 @@ jobs:
       - name: ls
         uses: ./.github/actions/my_actions
         with:
-          message: "Rodrigo"
+          message: "Rodrigoo"
     services:
       mysql:
         image: mysql:5.7
-        environment:
+        env:
           MYSQL_ROOT_PASSWORD: root
         ports:
           - 3306:3306
