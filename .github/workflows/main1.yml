@@ -8,3 +8,13 @@ jobs:
         uses: actions/checkout@v4
       - name: ls
         uses: ./.github/actions/my_actions
+        with:
+          message: "Rodrigo"
+    services:
+      mysql:
+        image: mysql:5.7
+        environment:
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
+          
