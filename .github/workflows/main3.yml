@@ -13,6 +13,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Notificación
+        run: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.WEBHOOK_URL }}
+        with:
+          author-name: "Actions"
+          fields: repo,message,commit,author,action,EventName
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
