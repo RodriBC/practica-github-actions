@@ -23,7 +23,14 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.0'
-        extensions: mbstring,bcmath,pdo,pdo_mysql
-    - name: Install packages
+        extensions: mbstring,bcmath,pdo,pdo_mysql,tokenizer,xml,zip
+
+    - name: Install Composer dependencies
       run: composer install --no-interaction
+
+    - name: Set permissions
+      run: chmod -R 777 storage bootstrap/cache
+
+    - name: Run migrations
+      run: php artisan migrate --force
         
