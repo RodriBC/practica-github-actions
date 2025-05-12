@@ -17,6 +17,11 @@ jobs:
       - name: Secret
         run: |
           echo "Secret: ${{ secrets.MY_SECRET }}"
+          mkdir -p ~/.ssh
+          echo "Secret: ${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+          cat ~/.ssh/known_hosts
       - name: Checkout code
         uses: actions/checkout@v4
       - name: ls
